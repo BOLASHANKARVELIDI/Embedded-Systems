@@ -1,0 +1,90 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006.0   LED1
+006.1   LED2
+006.2   LED3
+006.3   LED4
+007.0   SW1
+007.1   SW2
+007.6   RS
+007.7   EN
+008     LCD
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-029 str
+02A     count
+02B     @DIV88.P1
+02B-02C display_string.str
+02B     MAIN.@SCRATCH1
+02C     @DIV88.P1
+02D     display_string.j
+02D     @DIV88.@SCRATCH1
+02E     display_string.@SCRATCH1
+02F     display.A
+030     display.B
+031     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086.0   TLED1
+086.1   TLED2
+086.2   TLED3
+086.3   TLED4
+087.0   TSW1
+087.1   TSW2
+087.6   TRS
+087.7   TEN
+088     TLCD
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  display
+000024  display_string
+000042  @DIV88
+000057  MAIN
+000057  @cinit1
+000062  @cinit2
+
+Project Directory:
+    C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\TASK-1\
+
+Project Files:
+    SENSOR TYPE 3.c                                         [27-Jun-22 14:29  CRC=8C3D10D8]
+    SENSOR TYPE 3.h                                         [27-Jun-22 14:28  CRC=CF12E969]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=F81AC6D9
+
+Units:
+    SENSOR TYPE 3 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   SENSOR TYPE 3.xsym
+    Errors:      SENSOR TYPE 3.err
+    Ext Symbols: SENSOR TYPE 3.esym
+    INHX8:       SENSOR TYPE 3.hex
+    Symbols:     SENSOR TYPE 3.sym
+    List:        SENSOR TYPE 3.lst
+    Debug/COFF:  SENSOR TYPE 3.cof
+    Project:     SENSOR TYPE 3.ccspjt
+    Call Tree:   SENSOR TYPE 3.tre
+    Statistics:  SENSOR TYPE 3.STA

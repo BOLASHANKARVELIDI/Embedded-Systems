@@ -1,0 +1,3 @@
+юд1 SWITCH 1 LED
+   юдmain  0/27  Ram=1
+      юд@cinit1  (Inline)  Ram=0

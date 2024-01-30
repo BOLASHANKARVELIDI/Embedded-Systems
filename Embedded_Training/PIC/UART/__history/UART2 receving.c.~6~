@@ -1,0 +1,48 @@
+#include <UART2 receving.h>
+#byte LCD=0X08
+#byte TLCD=0X88
+#bit RS=0X07.0
+#bit TRS=0X87.0
+#bit EN=0X07.1
+#bit TEN=0X87.1
+#byte SPBRG=0x99
+#byte TXREG=0x19
+#byte RCREG=0x1A
+#bit TXIF=0x0c.4
+#bit RCIF=0x0c.5
+#byte TXSTA=0x98
+#byte RCSTA=0x18
+int v;
+void receive()
+{
+while(RCIF==0)
+{
+v=RCREG;
+RCIF=0;
+display(0x80,0);
+display(v,1);
+}
+void main()
+{
+LCD=0x00;
+RS=0;
+EN=0;
+TEN=0;
+TLCD=0;
+TRS=0;
+int i;
+display(0x38,0);
+display(0x0e,0);
+display(0xc0,0);
+int value;
+char data[]="BOLA SHANKAR";
+TXSTA=0x24;
+RCSTA=0x90;
+while(1)
+{
+receive();
+transmit('\r');
+delay_ms(200);
+}
+}
+}

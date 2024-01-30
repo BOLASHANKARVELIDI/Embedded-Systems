@@ -1,0 +1,89 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+007.6   RS
+007.7   EN
+008     PSP_DATA
+008     LCD
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+01E     ADRESH
+01F     ADCON0
+01F.2   GO_DOWN
+021-022 MAIN.RESULT
+023-024 MAIN.adres
+025     MAIN.a
+026     MAIN.b
+027     MAIN.c
+028     MAIN.d
+029     MAIN.e
+02A     MAIN.f
+02B-02C @DIV1616.P1
+02B     @DIV88.P2
+02B     MAIN.@SCRATCH1
+02C     @DIV88.P1
+02C     display.x
+02D-02E @DIV1616.P1
+02D     display.y
+02D     @DIV88.@SCRATCH1
+02E     @delay_ms1.P1
+02F     @DIV1616.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+087.6   TRS
+087.7   TEN
+088     TLCD
+09C.6   C1OUT
+09C.7   C2OUT
+09E     ADRESL
+09F     ADCON1
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  display
+000027  @DIV1616
+00004C  @DIV88
+000061  MAIN
+000061  @cinit1
+00006B  @cinit2
+
+Project Directory:
+    C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\ADC\
+
+Project Files:
+    ADC1.c                                                  [27-Jun-22 16:39  CRC=CADF5613]
+    ADC1.h                                                  [27-Jun-22 15:58  CRC=CF12E969]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=36BD0C14
+
+Units:
+    ADC1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   ADC1.xsym
+    Errors:      ADC1.err
+    Ext Symbols: ADC1.esym
+    INHX8:       ADC1.hex
+    Symbols:     ADC1.sym
+    List:        ADC1.lst
+    Debug/COFF:  ADC1.cof
+    Project:     ADC1.ccspjt
+    Call Tree:   ADC1.tre
+    Statistics:  ADC1.STA

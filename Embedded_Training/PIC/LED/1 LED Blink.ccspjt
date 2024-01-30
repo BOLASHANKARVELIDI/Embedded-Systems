@@ -1,0 +1,30 @@
+[PROJECT]
+Target=1 LED Blink.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=1 LED Blink.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\1 LED Blink]
+Type=4
+[mru-list]
+1=1 LED Blink.c
+[Opened Files]
+1=1 LED Blink.c
+2=2 LED Blink.c
+3=10 LED Blink.c
+4=8 LED even odd.c
+5=..\SWITCH\1 SWITCH 1 LED.c
+6=..\SWITCH\2 ON  SWITCH 1 LED.c
+7=..\SWITCH\2 SWITCH 1 LED.c
+8=..\LCD\1 LCD DISPLAY A.c
+9=..\LCD\1 LCD DISPLAY QISCET & 20491A0402.c
+10=
+[1 LED Blink.c]
+Type=4
+[Units]
+Count=1
+1=1 LED Blink (main)

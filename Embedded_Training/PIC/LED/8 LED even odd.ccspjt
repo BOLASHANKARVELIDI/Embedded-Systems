@@ -1,0 +1,22 @@
+[PROJECT]
+Target=8 LED even odd.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=8 LED even odd.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\8 LED even odd]
+Type=4
+[mru-list]
+1=8 LED even odd.c
+[Opened Files]
+1=8 LED even odd.c
+2=
+[8 LED even odd.c]
+Type=4
+[Units]
+Count=1
+1=8 LED even odd (main)

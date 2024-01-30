@@ -1,0 +1,11 @@
+#include <2 ON  SWITCH 1 LED.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

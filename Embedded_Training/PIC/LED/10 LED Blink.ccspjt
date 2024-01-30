@@ -1,0 +1,22 @@
+[PROJECT]
+Target=10 LED Blink.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=10 LED Blink.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LED\10 LED Blink]
+Type=4
+[mru-list]
+1=10 LED Blink.c
+[Opened Files]
+1=10 LED Blink.c
+2=
+[10 LED Blink.c]
+Type=4
+[Units]
+Count=1
+1=10 LED Blink (main)

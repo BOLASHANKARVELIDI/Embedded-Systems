@@ -1,0 +1,16 @@
+#include <UART2 receving.h>
+#byte LCD=0X08
+#byte TLCD=0X88
+#bit RS=0X07.0
+#bit TRS=0X87.0
+#bit EN=0X07.1
+#bit TEN=0X87.1
+void main()
+{
+
+   while(TRUE)
+   {
+   
+   }
+
+}

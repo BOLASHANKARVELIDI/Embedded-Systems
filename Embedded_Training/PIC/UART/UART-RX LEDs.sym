@@ -1,0 +1,99 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006.0   RS
+006.1   EN
+006.2   LED1
+006.3   LED2
+006.4   LED3
+006.5   LED4
+006.6   LED5
+006.7   LED6
+007.6   tx
+007.7   rx
+008     PSP_DATA
+008     LCD
+00C.4   TXIF
+00C.5   RCIF
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+018     RCSTA
+019     TXREG
+01A     RCREG
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-02A data
+02B     v
+02C     MAIN.j
+02D     receive.@SCRATCH1
+02D     MAIN.@SCRATCH1
+02E     transmit.A
+02E     display.A
+02F     display.B
+02F     transmit.@SCRATCH1
+030     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086.0   TRS
+086.1   TEN
+086.2   TLED1
+086.3   TLED2
+086.4   TLED3
+086.5   TLED4
+086.6   TLED5
+086.7   TLED6
+087.6   Ttx
+087.7   Trx
+088     TLCD
+098     TXSTA
+099     SPBRG
+09C.6   C1OUT
+09C.7   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000018  display
+000027  receive
+00003D  transmit
+000043  MAIN
+000043  @cinit1
+00004D  @cinit2
+
+Project Directory:
+    C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\UART\
+
+Project Files:
+    UART-RX LEDs.c                                          [03-Jul-22 18:44  CRC=C1681C7B]
+    UART-RX LEDs.h                                          [03-Jul-22 13:37  CRC=CF12E969]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h [03-Jul-13 14:28  CRC=4E65664C]
+
+Source signature=2D45D27C
+
+Units:
+    UART-RX LEDs (main)
+
+Compiler Settings:
+    Processor:      PIC16F877A
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   UART-RX LEDs.xsym
+    Errors:      UART-RX LEDs.err
+    Ext Symbols: UART-RX LEDs.esym
+    INHX8:       UART-RX LEDs.hex
+    Symbols:     UART-RX LEDs.sym
+    List:        UART-RX LEDs.lst
+    Debug/COFF:  UART-RX LEDs.cof
+    Project:     UART-RX LEDs.ccspjt
+    Call Tree:   UART-RX LEDs.tre
+    Statistics:  UART-RX LEDs.STA

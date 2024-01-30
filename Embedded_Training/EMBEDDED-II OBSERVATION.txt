@@ -1,0 +1,225 @@
+EMBEDDED SYSTEMS-II
+(Training course - 2)
+
+*1).What is an embedded system?
+*A).Combination of Software and Hardware for doing a specific Task.
+
+*2).What are the electrical and Electronical products?
+*A).
+*Electrical : 
+*-> Which uses AC Power like Fan,Motor,Transformer,Generators,etc..
+
+*Electonical :
+*->which uses DC Power like Transistor, diode, microprocessor, flip-flop, amplifier, etc.
+
+
+*Ex:-
+*For Example TWO PC manufactured by two companies A and B.
+*one is EMBEDDED PC and the other is NOT an EMBEDDED.
+*->EMBEDDED PC is used in BIG FACTORIES to measure the temparature and display on the monitor..
+*->In Hospitals MRI Scanning ,CT scan,Pulsometer,etc are EMBEDDED SYSTEMS.
+*->General PC are the not the EMBEDDED SYSTEM..
+	
+
+Q).  What is Microcontroller?
+A).  A microcontroller is a chip optimized to control electronic devices. It is stored in a single integrated circuit which is dedicated to performing a particular task and execute one specific application.It is specially designed circuits for embedded applications and is widely used in automatically controlled electronic devices. It contains memory, processor, and programmable I/O.
+				----------MICROCONTROLLER ::	..(MicroProcesser + Memory Allocation)..---------
+-> A microcontroller contains one or more CPUs (processor cores) along with memory and programmable input/output peripherals.
+->Microcontrollers are used in automatically controlled products and devices, such as automobile engine control systems, implantable medical devices, remote controls, office machines, appliances, power tools, toys and other embedded systems.
+->By reducing the size and cost compared to a design that uses a separate microprocessor, memory, and input/output devices, microcontrollers make it economical to digitally control even more devices and processes. 
+->A microcontroller can be considered a self-contained system with a processor, memory and peripherals and can be used as an embedded system.
+->The majority of microcontrollers in use today are embedded in other machinery, such as automobiles, telephones, appliances, and peripherals for computer systems.
+
+
+
+Q).  What is a Microprocessor?
+A).  A microprocessor is a controlling unit of a micro-computer wrapped inside a small chip. It performs Arithmetic Logical Unit (ALU) operations and communicates with the other devices connected with it. It is a single Integrated Circuit in which several functions are combined.
+					------------MICROPROCESSOR ::------------
+->The microprocessor contains the arithmetic, logic, and control circuitry required to perform the functions of a computer's central processing unit. 
+->The microprocessor is a multipurpose, clock-driven, register-based, digital integrated circuit that accepts binary data as input, processes it according to instructions stored in its memory, and provides results (also in binary form) as output. 
+->Microprocessors contain both combinational logic and sequential digital logic, and operate on numbers and symbols represented in the binary number system.
+
+
+			---------Types of Microprocessor------
+Important types of Microprocessors are:
+->  Complex Instruction Set Microprocessors
+->  The Application Specific Integrated Circuit
+->  Reduced Instruction Set Microprocessors
+->  Digital Signal Multiprocessors (DSPs)
+
+		------Types of Microcontroller----------
+Here are important types of Microcontroller:
+*->  8 bit Microcontroller : 8 bits accessed at a time [ EX: PIC,ARUDINO,NODE MCU ,etc  ]
+*->  16 bit Microcontroller : 16 bits at a time accessed [ EX: ATMEL2500  ]
+*->  32 bit Microcontroller : 32 bits at a time accessed [ EX; STM32,LPC2124,LPC2148,etc  ]
+->  Embedded Microcontroller
+->  External memory Microcontroller
+
+*-->> TO display the name,nearly 50 line of the code is used in PIC micro controller..
+*-->> To display the name,2 lines of code is used in AURDINO.
+*-->AURDINO is open source [i.e Everything means CODE is available in net ]
+*-->PIC is not an open source [i.e you need to the code physically everything..  ]
+
+				------History of Microprocessor::----
+Here, are the important landmark from the history of Microprocessor
+Fairchild Semiconductors invented the first IC (Integrated Circuit) in 1959.
+In 1968, Robert Noyce, Gordan Moore, Andrew Grove found their own company Intel.
+Intel grew from 3 man start-up in 1968 to industrial giant by 1981.
+In 1971, INTEL created the first generation Microprocessor 4004 that would run at a clock speed of 108 kHz
+From 1973 to 1978, second-generation 8-bit microprocessors were fabricated like Motorola 6800 and 6801, INTEL-8085, and Zilog’s-Z80.
+In 1978, Intel 8008 third-generation process came into the market.
+In the early 80s, Intel released fourth-generation 32-bit processors.
+In 1995, intel released in fifth-generation 64-bit processors .
+
+				--------History of Microcontroller::------
+Here, are important landmarks from the history of Microcontroller:
+First used in 1975(Intel 8048)
+The introduction of EEPROM in 1993
+The same year, Atmel introduced the first microcontroller using Flash memory.
+
+
+
+					----------Features of Microprocessor:-----
+->Offers built-in monitor/debugger program with interrupt capability
+->Large amount of instructions each carrying out a different variation of the same operation
+->Offers Parallel I/O
+->Instruction cycle timer
+->External memory interface
+
+					------Features of Microcontroller:-----
+->Processor reset
+->Program and Variable Memory (RAM) I/O pins
+->Device clocking central processor
+->Instruction cycle timers
+
+					-----Applications of Microprocessor ::------
+Microprocessors are mainly used in devices like
+-> Calculators,Accounting system,Games machine,Complex industrial controllers,Traffic light,Control data,Military applications,Defense systems,Computation systems.
+
+					-------Applications of Microcontroller ::------
+ Microcontrollers are mainly used in devices like
+-> Mobile phones,Automobiles,CD/DVD players,Washing machines,Cameras,Security alarms,Keyboard controllers,Microwave oven,Watches,Mp3 players.
+
+Q).  What is the Difference Between a Microcontroller and Microprocessor?
+A).
+->  The key difference between a Microprocessor and a Microcontroller is the Microprocessor consists of only a Central Processing Unit, whereas the Microcontroller contains a CPU, Memory, I/O all integrated into one chip. 
+->  A microcontroller is an inexpensive, straightforward, and small number of instructions to process, whereas a Microprocessor is complex and expensive, with many instructions.
+
+Q).  Which is Better Microcontroller or Microprocessor?
+A).
+->  Both of these processes are good. However, which one you should use depends upon your requirements.
+->  Microcontrollers are mainly used for small applications like washing machines, Cameras, Security alarms, Keyboard controllers, etc., 
+->  Whereas Microprocessor is used in Personal Computers, Complex industrial controllers, Traffic light, Defense systems, etc.
+
+Q).  Which is Faster Microprocessor or Microcontroller?
+A).
+->  Microprocessors are much faster than microcontrollers. The clock speed of a microprocessor is above 1 GHz.
+->  While in the case of the Microcontroller, the clock speed is 200MHz or more, depending on the architecture.
+
+
+		MICROPROCESSOR															MICROCONTROLLER
+(1.1)Microprocessor is the heart of Computer system.							(2.1)Micro Controller is the heart of an embedded system.
+(1.2)It is only a processor, so memory and I/O components need to be connected externally	(2.2)Micro Controller has a processor along with internal memory and I/O components.
+(1.3)Memory and I/O has to be connected externally, so the circuit becomes large.		(2.3)Memory and I/O are already present, and the internal circuit is small.
+(1.4)You can’t use it in compact systems									(2.4)You can use it in compact systems.
+(1.5)Cost of the entire system is high									(2.5)Cost of the entire system is low.
+(1.6)Most of the microprocessors do not have power saving features.				(2.6)Most of the microcontrollers offer power-saving mode.
+(1.7)It is mainly used in personal computers.								(2.7)It is used mainly in a washing machine, MP3 players, and embedded systems.
+(1.8)Microprocessor has a smaller number of registers, so more operations are memory-based.(2.8)Microcontroller has more register. Hence the programs are easier to write.
+(1.9)Microprocessors are based on Von Neumann model							(2.9)Micro controllers are based on Harvard architecture.
+(1.10)It is a central processing unit on a single silicon-based integrated chip.      (2.10)It is a byproduct of the development of microprocessors with a CPU along with other peripherals.
+(1.11)It has no RAM, ROM, Input-Output units, timers, and other peripherals on the chip.	(2.11)It has a CPU along with RAM, ROM, and other peripherals embedded on a single chip.
+(1.12)It uses an external bus to interface to RAM, ROM, and other peripherals.		(2.12)It uses an internal controlling bus.
+(1.13)Microprocessor-based systems can run at a very high speed because of the technology involved.(2.13)Microcontroller based systems run up to 200MHz or more depending on the architecture.
+(1.14)It’s used for general purpose applications that allow you to handle loads of data.	 (2.14)It’s used for application-specific systems.
+(1.15)It’s complex and expensive, with a large number of instructions to process.	     	 (2.15)It’s simple and inexpensive with less number of instructions to process.
+(1.16)Due to external components, the total power consumption is high. Therefore, it is not ideal for the devices running on stored power like batteries.
+(2.16)As external components are low, total power consumption is less. So it can be used with devices running on stored power like batteries.
+
+
+**   Difference b/w MP & MC ??
+**   				----  M P ----                                   						 ----- M C ----
+*  1). Multiple tasks at a time.									*1).Single Task
+*  2).CPU is a microprocesser.									*2).Everything is connected internally(MEMORY,etc..,)		
+		[ we have to connect input and output externally].				
+		(input--keyboard,mouuse    output--priinter,display).				
+*  3). It will do in high speed [ 1GHX ].								*3). 30-50 MHZ.
+*  4).  INTEL 8085.											*4). 8051 micro controller.
+*  5).  Processers runs the program and jumps to anyline of the code.			*5).Controllers run the code step by step.
+
+
+**		PIC16F877A
+**	PIC == PERIPHERAL INTERFACE INTERFACE CONTROLLER
+*	16  == Serial Number (16th series number is controlleing)
+*     F   == Flash Memory
+*     8   == 8 bit Controller
+*     77  == Product Number
+*     A   == Analog Comparator
+
+**  Q). Why we have to use the FLash MEmory in Controller??
+**  A). To dump the data(code) many times.
+
+** -> In PIC we have two Memories
+	i). PROGRAM MEMORY (Program will be inserted in Program Memory)
+	ii).FLASH MEMORY
+**->We need to know the Features of the microcontroller 
+* -> 5V DC [Operating Voltage ]
+* -> (0-20)MHZ [Operating Frequency ]
+* -> ANALOG COMPARATOR :: Comparing the two Analog inputs giving the digital output.
+
+			|-----------|
+	      A   --|- |\		|
+			|  | \------|------- Digital Outputs
+		B   --|- | /	|
+			|  |/		|
+			|___________|
+
+*->In PIC16F877A 
+	40 pins - 5 ports { A --> A0,A1,....,A5 (6) }		
+				{ B --> B0,B1,....,B7 (8) }		}	GPIO pins --- Total : 33 pins
+				{ C --> C0,C1,....,C7 (8) }		}	(General Purpose Input Output)
+				{ D --> D0,D1,....,D7 (8) }
+				{ E --> E0,E1,E2      (3) }
+		  -SUPPLY PINs	{ two 5V pins 	}	
+		    			{ two Ground pins	}		(34-37 pins)
+		  - CRYSTAL OSCILATOR [ 38.OSC-1 ,39. OSC-2  ]
+		  - MCLR [40 ] ->Master Clear(Reset pin)  ->It is the 1st pin in PIC16F877A micro controller. 
+
+** Q).What is Frequency??
+** A).No.of Oscillations per Second.
+	Ex:: Even a bulb for 1 second, 50 times is going to ON & OFF.
+* -> For PIc there is no clock pulse.So we use Crystal Oscillator to generate clocck pulse(Externally conected).Crystal Oscillator has two pins.
+
+
+* Q). What is difference between Flash Memory and RESET PIN ??
+* A). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

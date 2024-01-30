@@ -1,0 +1,22 @@
+[PROJECT]
+Target=UART1.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=UART1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\UART\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\UART\UART1]
+Type=4
+[mru-list]
+1=UART1.c
+[Opened Files]
+1=UART1.c
+2=
+[UART1.c]
+Type=4
+[Units]
+Count=1
+1=UART1 (main)

@@ -1,0 +1,13 @@
+ÀÄ1 LCD DISPLAY using STRINGS
+   ÀÄMAIN  0/55  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ*
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ*
+      ÀÄdisplay_string  0/30  Ram=3
+         ÃÄdisplay  0/12  Ram=2
+         ³  ÀÄ*
+         ÀÄ@delay_ms1  0/20  Ram=1

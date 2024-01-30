@@ -1,0 +1,11 @@
+#include <4 LED ADC count.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

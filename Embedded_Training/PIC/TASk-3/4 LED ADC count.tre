@@ -1,0 +1,30 @@
+ÀÄ4 LED ADC count
+   ÀÄmain  0/213  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄ@DIV1616  0/37  Ram=5
+      ÃÄ@DIV1616  0/37  Ram=5
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÀÄ@delay_ms1  0/20  Ram=1

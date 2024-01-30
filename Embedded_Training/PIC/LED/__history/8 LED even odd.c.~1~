@@ -1,0 +1,11 @@
+#include <8 LED even odd.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

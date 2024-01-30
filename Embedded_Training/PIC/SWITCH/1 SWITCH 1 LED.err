@@ -1,0 +1,4 @@
+*** Error 132 "1 SWITCH 1 LED.c" Line 5(19,20): STDOUT not defined (may be missing #USE RS232)  ::
+*** Error 51 "1 SWITCH 1 LED.c" Line 6(50,51): A numeric expression must appear here
+      2 Errors,  0 Warnings.
+Build Failed.

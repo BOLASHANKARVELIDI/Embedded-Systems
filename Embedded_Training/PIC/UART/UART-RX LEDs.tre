@@ -1,0 +1,23 @@
+ÀÄUART-RX LEDs
+   ÀÄMAIN  0/176  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÃÄ@delay_ms1  0/20  Ram=1
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄreceive  0/22  Ram=1
+      ³  ÃÄdisplay  0/15  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄdisplay  0/15  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄtransmit  0/6  Ram=2
+      ÃÄdisplay  0/15  Ram=2
+      ³  ÀÄ*
+      ÃÄtransmit  0/6  Ram=2
+      ÀÄ@delay_ms1  0/20  Ram=1

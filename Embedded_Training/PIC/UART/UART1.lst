@@ -1,0 +1,168 @@
+CCS PCM C Compiler, Version 5.008, 5967               02-Jul-22 12:10
+
+               Filename:   C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\UART\UART1.lst
+
+               ROM used:   105 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   17 (5%) at main() level
+                           20 (5%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   020
+0003:  NOP
+.................... #include <UART1.h> 
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20MHz) 
+*
+000A:  MOVLW  2E
+000B:  MOVWF  04
+000C:  BCF    03.7
+000D:  MOVF   00,W
+000E:  BTFSC  03.2
+000F:  GOTO   01D
+0010:  MOVLW  06
+0011:  MOVWF  78
+0012:  CLRF   77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 78,F
+0016:  GOTO   012
+0017:  MOVLW  7B
+0018:  MOVWF  77
+0019:  DECFSZ 77,F
+001A:  GOTO   019
+001B:  DECFSZ 00,F
+001C:  GOTO   010
+001D:  BCF    0A.3
+001E:  BCF    0A.4
+001F:  GOTO   065 (RETURN)
+....................  
+....................  
+.................... #byte SPBRG=0x99 
+.................... #byte TXREG=0x19 
+.................... #byte RCREG=0x1A 
+.................... #bit TXIF=0x0c.4 
+.................... #bit RCIF=0x0c.5 
+.................... #byte TXSTA=0x98 
+.................... #byte RCSTA=0x18 
+.................... void transmit(char a) 
+.................... { 
+.................... TXREG=a; 
+*
+0004:  MOVF   2E,W
+0005:  MOVWF  19
+.................... while(TXIF==0); 
+0006:  BTFSS  0C.4
+0007:  GOTO   006
+.................... TXIF=0; 
+0008:  BCF    0C.4
+0009:  RETURN
+.................... } 
+.................... void main() 
+*
+0020:  MOVF   03,W
+0021:  ANDLW  1F
+0022:  MOVWF  03
+0023:  BSF    03.5
+0024:  BSF    1F.0
+0025:  BSF    1F.1
+0026:  BSF    1F.2
+0027:  BCF    1F.3
+0028:  MOVLW  07
+0029:  MOVWF  1C
+002A:  BCF    03.7
+.................... { 
+.................... char data[]="QISCET_ECE"; 
+002B:  MOVLW  51
+002C:  BCF    03.5
+002D:  MOVWF  21
+002E:  MOVLW  49
+002F:  MOVWF  22
+0030:  MOVLW  53
+0031:  MOVWF  23
+0032:  MOVLW  43
+0033:  MOVWF  24
+0034:  MOVLW  45
+0035:  MOVWF  25
+0036:  MOVLW  54
+0037:  MOVWF  26
+0038:  MOVLW  5F
+0039:  MOVWF  27
+003A:  MOVLW  45
+003B:  MOVWF  28
+003C:  MOVLW  43
+003D:  MOVWF  29
+003E:  MOVLW  45
+003F:  MOVWF  2A
+0040:  CLRF   2B
+.................... TXSTA=0x26; 
+0041:  MOVLW  26
+0042:  BSF    03.5
+0043:  MOVWF  18
+.................... RCSTA=0x90; 
+0044:  MOVLW  90
+0045:  BCF    03.5
+0046:  MOVWF  18
+.................... SPBRG=129; 
+0047:  MOVLW  81
+0048:  BSF    03.5
+0049:  MOVWF  19
+.................... while(TRUE) 
+.................... { 
+.................... for(int i=0;data[i]!=0;i++) 
+004A:  BCF    03.5
+004B:  CLRF   2C
+004C:  MOVLW  21
+004D:  ADDWF  2C,W
+004E:  MOVWF  04
+004F:  BCF    03.7
+0050:  MOVF   00,F
+0051:  BTFSC  03.2
+0052:  GOTO   05D
+.................... { 
+.................... transmit(data[i]); 
+0053:  MOVLW  21
+0054:  ADDWF  2C,W
+0055:  MOVWF  04
+0056:  BCF    03.7
+0057:  MOVF   00,W
+0058:  MOVWF  2D
+0059:  MOVWF  2E
+005A:  CALL   004
+005B:  INCF   2C,F
+005C:  GOTO   04C
+.................... } 
+.................... transmit('\r'); 
+005D:  MOVLW  0D
+005E:  MOVWF  2E
+005F:  CALL   004
+.................... delay_ms(500); 
+0060:  MOVLW  02
+0061:  MOVWF  2D
+0062:  MOVLW  FA
+0063:  MOVWF  2E
+0064:  GOTO   00A
+0065:  DECFSZ 2D,F
+0066:  GOTO   062
+0067:  GOTO   04B
+.................... } 
+.................... } 
+0068:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

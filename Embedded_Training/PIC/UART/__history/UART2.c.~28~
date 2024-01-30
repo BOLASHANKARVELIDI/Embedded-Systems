@@ -1,0 +1,74 @@
+#include <UART2.h>
+#byte LCD=0X08
+#byte TLCD=0X88
+#bit RS=0X07.0
+#bit TRS=0X87.0
+#bit EN=0X07.1
+#bit TEN=0X87.1
+#byte SPBRG=0x99
+#byte TXREG=0x19
+#byte RCREG=0x1A
+#bit TXIF=0x0C.4
+#bit RCIF=0x0C.5
+#byte TXSTA=0x98
+#byte RCSTA=0x18
+char v;
+char data[11]="ECE_QISCET";
+void display(unsigned int A,unsigned int B)
+{
+LCD=A;
+RS=B;
+EN=1;
+delay_ms(200);
+EN=0;
+delay_ms(200);
+}
+void display_data(char *data)
+{
+for(int i=0;data[i]!=0;i++)
+{
+display(data[i],1);
+delay_ms(200);
+}
+}
+void transmit(char a)
+{
+TXREG=a;
+while(TXIF==0);
+TXIF=0;
+}
+void receive()
+{
+while(RCIF==0);
+v=RCREG;
+RCIF=0;
+display(0x80,0);
+display(data,1);
+}
+void main()
+{
+LCD=0x00;
+RS=0;
+EN=0;
+TEN=0;
+TLCD=0;
+TRS=0;
+TXSTA=0x26;
+RCSTA=0x90;
+SPBRG=129;
+display(0x0C,0);
+display(0x38,0);
+display(0x0e,0);
+while(true)
+{
+receive();
+for(int i=0;data[i]!=0;i++)
+{
+   transmit(data[i]);
+}
+transmit('\r');
+
+delay_ms(500);
+}
+}
+

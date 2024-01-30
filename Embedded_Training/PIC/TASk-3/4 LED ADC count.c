@@ -1,0 +1,128 @@
+#include <4 LED ADC count.h>
+
+#byte LCD=0x08
+#byte TLCD=0x88
+
+#bit RS=0x07.6
+#bit TRS=0x87.6
+
+#bit EN=0x07.7
+#bit TEN=0x87.7
+
+#bit LED1=0x06.0
+#bit TLED1=0x86.0
+
+#bit LED2=0x06.1
+#bit TLED2=0x86.1
+
+#bit LED3=0x06.2
+#bit TLED3=0x86.2
+
+#bit LED4=0x06.3
+#bit TLED4=0x86.3
+
+#byte ADCON0=0x1F
+#byte ADRESH=0x1E
+
+#byte ADCON1=0x9F
+#byte ADRESL=0x9E
+
+#bit GO_DOWN=0X1F.2
+void display(char ,int);
+void main()
+{
+ADCON0=0x01;
+
+LCD=0x00;
+RS=0;
+EN=0;
+TEN=0;
+TLCD=0;
+TRS=0;
+LED1=0;
+TLED1=0;
+LED2=0;
+TLED2=0;
+LED3=0;
+TLED3=0;
+LED4=0;
+TLED4=0;
+ADCON1=0x80;
+
+long int RESULT,adres;
+int a,b,c,d,e,f;
+
+   while(TRUE)
+   {
+   GO_DOWN=1;
+   display(0x38,0);
+   display(0x0e,0);
+   display(0xc0,0);
+   adres=ADRESH;
+   delay_ms(200);
+   RESULT=ADRESL|adres<<8;
+   delay_ms(200);
+   
+   a=RESULT/1000;
+   b=RESULT%1000;
+   c=b/100;
+   d=b%100;
+   e=d/10;
+   f=d%10;
+   display(a+0x30,1);
+   delay_ms(200);  
+   display(c+0x30,1);
+   delay_ms(200);
+   display(e+0x30,1);
+   delay_ms(200);
+   display(f+0x30,1);
+   delay_ms(200);
+   
+   if(RESULT>=250)
+   {
+   LED1=1;
+   }
+   else
+   {
+   LED1=0;
+   }
+   
+   if(RESULT>=500)
+   {
+   LED2=1;
+   }
+   else
+   {
+   LED2=0;
+   }
+   
+   if(RESULT>=750)
+   {
+   LED3=1;
+   }
+   else
+   {
+   LED3=0;
+   }
+   
+   if(RESULT>=1000)
+   {
+   LED4=1;
+   }
+   else
+   {
+   LED4=0;
+   }
+   
+   }
+}
+
+void display(char x,int y)
+{
+LCD=x;
+RS=y;
+EN=1;
+delay_ms(3);
+EN=0;
+delay_ms(3);
+}

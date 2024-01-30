@@ -1,0 +1,310 @@
+CCS PCM C Compiler, Version 5.008, 5967               02-Jul-22 20:59
+
+               Filename:   C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\UART\UART2.lst
+
+               ROM used:   175 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   17 (5%) at main() level
+                           21 (6%) worst case
+               Stack used: 3 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   041
+0003:  NOP
+.................... #include <UART2.h> 
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20MHz) 
+0004:  MOVLW  2F
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   017
+000A:  MOVLW  06
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  7B
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  DECFSZ 00,F
+0016:  GOTO   00A
+0017:  RETURN
+....................  
+....................  
+.................... #byte LCD=0X08 
+.................... #byte TLCD=0X88 
+....................  
+.................... #bit RS=0X06.0 
+.................... #bit TRS=0X86.0 
+....................  
+.................... #bit EN=0X06.1 
+.................... #bit TEN=0X86.1 
+....................  
+.................... #bit tx=0x07.6 
+.................... #bit Ttx=0x87.6 
+....................  
+.................... #bit rx=0x07.7 
+.................... #bit Trx=0x87.7 
+....................  
+....................  
+....................  
+.................... #byte SPBRG=0x99 
+.................... #byte TXREG=0x19 
+.................... #byte RCREG=0x1A 
+....................  
+.................... #bit TXIF=0x0C.4 
+.................... #bit RCIF=0x0C.5 
+....................  
+.................... #byte TXSTA=0x98 
+.................... #byte RCSTA=0x18 
+....................  
+.................... //char v; 
+.................... char data[11]="ECE_QISCET"; 
+*
+004C:  MOVLW  45
+004D:  BCF    03.5
+004E:  MOVWF  20
+004F:  MOVLW  43
+0050:  MOVWF  21
+0051:  MOVLW  45
+0052:  MOVWF  22
+0053:  MOVLW  5F
+0054:  MOVWF  23
+0055:  MOVLW  51
+0056:  MOVWF  24
+0057:  MOVLW  49
+0058:  MOVWF  25
+0059:  MOVLW  53
+005A:  MOVWF  26
+005B:  MOVLW  43
+005C:  MOVWF  27
+005D:  MOVLW  45
+005E:  MOVWF  28
+005F:  MOVLW  54
+0060:  MOVWF  29
+0061:  CLRF   2A
+....................  
+.................... void display(unsigned int A,unsigned int B) 
+.................... { 
+.................... LCD=A; 
+*
+0018:  MOVF   2D,W
+0019:  MOVWF  08
+.................... RS=B; 
+001A:  BTFSS  2E.0
+001B:  BCF    06.0
+001C:  BTFSC  2E.0
+001D:  BSF    06.0
+.................... EN=1; 
+001E:  BSF    06.1
+.................... delay_ms(200); 
+001F:  MOVLW  C8
+0020:  MOVWF  2F
+0021:  CALL   004
+.................... EN=0; 
+0022:  BCF    06.1
+.................... delay_ms(200); 
+0023:  MOVLW  C8
+0024:  MOVWF  2F
+0025:  CALL   004
+0026:  RETURN
+.................... } 
+....................  
+....................  
+.................... void transmit(char a) 
+.................... { 
+.................... TXREG=a; 
+*
+003B:  MOVF   2D,W
+003C:  MOVWF  19
+.................... while(TXIF==0); 
+003D:  BTFSS  0C.4
+003E:  GOTO   03D
+.................... TXIF=0; 
+003F:  BCF    0C.4
+0040:  RETURN
+.................... } 
+....................  
+....................  
+.................... void receive() 
+.................... { 
+....................  
+.................... while(RCIF==0); 
+*
+0027:  BTFSS  0C.5
+0028:  GOTO   027
+.................... RCIF=0; 
+0029:  BCF    0C.5
+.................... char v=RCREG; 
+002A:  MOVF   1A,W
+002B:  MOVWF  2C
+.................... display(0x80,0); 
+002C:  MOVLW  80
+002D:  MOVWF  2D
+002E:  CLRF   2E
+002F:  CALL   018
+.................... display(v,1); 
+0030:  MOVF   2C,W
+0031:  MOVWF  2D
+0032:  MOVLW  01
+0033:  MOVWF  2E
+0034:  CALL   018
+.................... delay_ms(200); 
+0035:  MOVLW  C8
+0036:  MOVWF  2F
+0037:  CALL   004
+0038:  BCF    0A.3
+0039:  BCF    0A.4
+003A:  GOTO   087 (RETURN)
+.................... } 
+....................  
+....................  
+.................... void main() 
+*
+0041:  MOVF   03,W
+0042:  ANDLW  1F
+0043:  MOVWF  03
+0044:  BSF    03.5
+0045:  BSF    1F.0
+0046:  BSF    1F.1
+0047:  BSF    1F.2
+0048:  BCF    1F.3
+0049:  MOVLW  07
+004A:  MOVWF  1C
+004B:  BCF    03.7
+.................... { 
+.................... LCD=0; 
+*
+0062:  CLRF   08
+.................... TLCD=0; 
+0063:  BSF    03.5
+0064:  CLRF   08
+....................  
+.................... RS=0; 
+0065:  BCF    03.5
+0066:  BCF    06.0
+.................... TRS=0; 
+0067:  BSF    03.5
+0068:  BCF    06.0
+....................  
+.................... EN=0; 
+0069:  BCF    03.5
+006A:  BCF    06.1
+.................... TEN=0; 
+006B:  BSF    03.5
+006C:  BCF    06.1
+....................  
+.................... Ttx=0; 
+006D:  BCF    07.6
+.................... Trx=1; 
+006E:  BSF    07.7
+....................  
+.................... display(0x0c,0); 
+006F:  MOVLW  0C
+0070:  BCF    03.5
+0071:  MOVWF  2D
+0072:  CLRF   2E
+0073:  CALL   018
+.................... display(0x38,0); 
+0074:  MOVLW  38
+0075:  MOVWF  2D
+0076:  CLRF   2E
+0077:  CALL   018
+.................... display(0x80,0); 
+0078:  MOVLW  80
+0079:  MOVWF  2D
+007A:  CLRF   2E
+007B:  CALL   018
+....................  
+.................... TXSTA=0x24; 
+007C:  MOVLW  24
+007D:  BSF    03.5
+007E:  MOVWF  18
+.................... RCSTA=0x90; 
+007F:  MOVLW  90
+0080:  BCF    03.5
+0081:  MOVWF  18
+.................... SPBRG=129; 
+0082:  MOVLW  81
+0083:  BSF    03.5
+0084:  MOVWF  19
+....................  
+....................  
+.................... while(true) 
+.................... { 
+.................... receive(); 
+0085:  BCF    03.5
+0086:  GOTO   027
+.................... display(0xC0,0); 
+0087:  MOVLW  C0
+0088:  MOVWF  2D
+0089:  CLRF   2E
+008A:  CALL   018
+.................... for(int i=0;data[i]!=0;i++) 
+008B:  CLRF   2B
+008C:  MOVLW  20
+008D:  ADDWF  2B,W
+008E:  MOVWF  04
+008F:  BCF    03.7
+0090:  MOVF   00,F
+0091:  BTFSC  03.2
+0092:  GOTO   0A7
+.................... { 
+.................... transmit(data[i]); 
+0093:  MOVLW  20
+0094:  ADDWF  2B,W
+0095:  MOVWF  04
+0096:  BCF    03.7
+0097:  MOVF   00,W
+0098:  MOVWF  2C
+0099:  MOVWF  2D
+009A:  CALL   03B
+.................... display(data[i],1); 
+009B:  MOVLW  20
+009C:  ADDWF  2B,W
+009D:  MOVWF  04
+009E:  BCF    03.7
+009F:  MOVF   00,W
+00A0:  MOVWF  2C
+00A1:  MOVWF  2D
+00A2:  MOVLW  01
+00A3:  MOVWF  2E
+00A4:  CALL   018
+00A5:  INCF   2B,F
+00A6:  GOTO   08C
+.................... } 
+.................... transmit('\r'); 
+00A7:  MOVLW  0D
+00A8:  MOVWF  2D
+00A9:  CALL   03B
+.................... delay_ms(200); 
+00AA:  MOVLW  C8
+00AB:  MOVWF  2F
+00AC:  CALL   004
+00AD:  GOTO   086
+.................... } 
+.................... } 
+....................  
+00AE:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

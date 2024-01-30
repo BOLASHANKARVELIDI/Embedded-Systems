@@ -1,0 +1,6 @@
+ÀÄUART1
+   ÀÄMAIN  0/73  Ram=12
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄtransmit  0/6  Ram=2
+      ÃÄtransmit  0/6  Ram=2
+      ÀÄ@delay_ms1  0/22  Ram=1

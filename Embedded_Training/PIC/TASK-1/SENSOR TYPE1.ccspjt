@@ -1,0 +1,19 @@
+[PROJECT]
+Target=SENSOR TYPE1.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.008
+Compiler=PCM
+[Target Data]
+FileList=SENSOR TYPE1.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\TASK-1\
+[SENSOR TYPE1.c]
+Type=4
+[mru-list]
+1=SENSOR TYPE1.c
+[Opened Files]
+1=SENSOR TYPE1.c
+2=
+[Units]
+Count=1
+1=SENSOR TYPE1 (main)

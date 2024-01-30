@@ -1,0 +1,11 @@
+#include <SENSOR TYPE 3.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

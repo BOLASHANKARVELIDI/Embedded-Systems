@@ -1,0 +1,24 @@
+#include <1 SWITCH 1 LED.h>
+#bit sw=0X06.1
+#bit tsw=0x86.1
+#bit led=0x07.0
+#bit tled=0x87.0
+void main()
+{
+sw=0;
+tsw=1;
+led=0;
+tled=0;
+   while(TRUE)
+   {
+     if(sw==1)
+     {
+     led=1;
+     }
+     else
+     {
+     led=0;
+     }
+   }
+
+}

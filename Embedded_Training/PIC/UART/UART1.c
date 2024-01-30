@@ -1,0 +1,30 @@
+#include <UART1.h>
+#byte SPBRG=0x99
+#byte TXREG=0x19
+#byte RCREG=0x1A
+#bit TXIF=0x0c.4
+#bit RCIF=0x0c.5
+#byte TXSTA=0x98
+#byte RCSTA=0x18
+void transmit(char a)
+{
+TXREG=a;
+while(TXIF==0);
+TXIF=0;
+}
+void main()
+{
+char data[]="QISCET_ECE";
+TXSTA=0x26;
+RCSTA=0x90;
+SPBRG=129;
+while(TRUE)
+{
+for(int i=0;data[i]!=0;i++)
+{
+transmit(data[i]);
+}
+transmit('\r');
+delay_ms(500);
+}
+}

@@ -1,0 +1,22 @@
+[PROJECT]
+Target=2 SWITCH 1 LED.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=2 SWITCH 1 LED.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\SWITCH\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\SWITCH\2 SWITCH 1 LED]
+Type=4
+[mru-list]
+1=2 SWITCH 1 LED.c
+[Opened Files]
+1=2 SWITCH 1 LED.c
+2=
+[2 SWITCH 1 LED.c]
+Type=4
+[Units]
+Count=1
+1=2 SWITCH 1 LED (main)

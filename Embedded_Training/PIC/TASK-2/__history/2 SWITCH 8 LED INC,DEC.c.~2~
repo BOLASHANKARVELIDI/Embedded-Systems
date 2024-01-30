@@ -1,0 +1,13 @@
+#include <2 SWITCH 8 LED INC,DEC.h>
+#bit LED1=0x06.0
+#bit LED2=0x06.1
+#bit LED3=0x
+void main()
+{
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

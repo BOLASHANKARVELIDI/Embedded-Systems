@@ -1,0 +1,49 @@
+
+ROM used:   223/8192 (3%)
+            223/8192 (3%) including unused fragments
+
+            0.3 Average locations per line
+            2.5 Average locations per statement
+
+RAM used:   7/368 (2%) at main() level
+            7/368 (2%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  143    88 100  2 SWITCH 8 LED INC DEC 3.c
+   10     0   0  2 SWITCH 8 LED INC DEC 3.h
+  661     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F877A.h
+----- -----
+  814    88 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     20   9    1             @delay_ms1
+0    199  89    1  2481  6.4  main
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               1
+    Statements              88
+    Comments                110
+    Volume (V)              2487
+    Difficulty (D)          6.3
+    Effort to implement (E) 15736
+    Time to implement (T)   15 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   10
+    Maintainability (MI)    30
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   219  1825  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

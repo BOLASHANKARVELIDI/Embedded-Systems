@@ -1,0 +1,17 @@
+ÀÄSENSOR TYPE
+   ÀÄMAIN  0/117  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ*
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ*
+      ÃÄdisplay_string  0/30  Ram=3
+      ³  ÃÄdisplay  0/12  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄ@delay_ms1  0/20  Ram=1
+      ÃÄdisplay  0/12  Ram=2
+      ³  ÀÄ*
+      ÀÄdisplay  0/12  Ram=2
+         ÀÄ*

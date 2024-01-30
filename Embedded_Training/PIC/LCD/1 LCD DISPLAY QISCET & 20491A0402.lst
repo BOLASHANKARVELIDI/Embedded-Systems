@@ -1,0 +1,308 @@
+CCS PCM C Compiler, Version 5.008, 5967               25-Jun-22 14:47
+
+               Filename:   C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LCD\1 LCD DISPLAY QISCET & 20491A0402.lst
+
+               ROM used:   212 words (3%)
+                           Largest free fragment is 2048
+               RAM used:   5 (1%) at main() level
+                           8 (2%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   022
+0003:  NOP
+.................... #include <1 LCD DISPLAY A.h> 
+.................... #include <16F877A.h> 
+.................... //////// Standard Header file for the PIC16F877A device //////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #device ADC=16 
+....................  
+.................... #FUSES NOWDT                 	//No Watch Dog Timer 
+.................... #FUSES NOBROWNOUT            	//No brownout reset 
+.................... #FUSES NOLVP                 	//No low voltage prgming, B3(PIC16) or B5(PIC18) used for I/O 
+....................  
+.................... #use delay(crystal=20MHz) 
+*
+000D:  MOVLW  23
+000E:  MOVWF  04
+000F:  BCF    03.7
+0010:  MOVF   00,W
+0011:  BTFSC  03.2
+0012:  GOTO   020
+0013:  MOVLW  06
+0014:  MOVWF  78
+0015:  CLRF   77
+0016:  DECFSZ 77,F
+0017:  GOTO   016
+0018:  DECFSZ 78,F
+0019:  GOTO   015
+001A:  MOVLW  7B
+001B:  MOVWF  77
+001C:  DECFSZ 77,F
+001D:  GOTO   01C
+001E:  DECFSZ 00,F
+001F:  GOTO   013
+....................  
+....................  
+.................... #byte LCD=0X08 
+.................... #byte TLCD=0X88 
+.................... #bit RS=0X07.0 
+.................... #bit TRS=0X87.0 
+.................... #bit EN=0X07.1 
+.................... #bit TEN=0X87.1 
+.................... void display(unsigned int A,unsigned int B) 
+.................... { 
+.................... LCD=A; 
+*
+0004:  MOVF   21,W
+0005:  MOVWF  08
+.................... RS=B; 
+0006:  BTFSS  22.0
+0007:  BCF    07.0
+0008:  BTFSC  22.0
+0009:  BSF    07.0
+.................... EN=1; 
+000A:  BSF    07.1
+.................... delay_ms(200); 
+000B:  MOVLW  C8
+000C:  MOVWF  23
+.................... EN=0; 
+*
+0020:  BCF    07.1
+0021:  RETURN
+.................... } 
+.................... void main() 
+0022:  MOVF   03,W
+0023:  ANDLW  1F
+0024:  MOVWF  03
+0025:  BSF    03.5
+0026:  BSF    1F.0
+0027:  BSF    1F.1
+0028:  BSF    1F.2
+0029:  BCF    1F.3
+002A:  MOVLW  07
+002B:  MOVWF  1C
+002C:  BCF    03.7
+.................... { 
+.................... LCD=0; 
+002D:  BCF    03.5
+002E:  CLRF   08
+.................... TLCD=0; 
+002F:  BSF    03.5
+0030:  CLRF   08
+.................... RS=0; 
+0031:  BCF    03.5
+0032:  BCF    07.0
+.................... TRS=0; 
+0033:  BSF    03.5
+0034:  BCF    07.0
+.................... EN=0; 
+0035:  BCF    03.5
+0036:  BCF    07.1
+.................... TEN=0; 
+0037:  BSF    03.5
+0038:  BCF    07.1
+.................... display(0X0C,0); 
+0039:  MOVLW  0C
+003A:  BCF    03.5
+003B:  MOVWF  21
+003C:  CLRF   22
+003D:  CALL   004
+.................... display(0X38,0); 
+003E:  MOVLW  38
+003F:  MOVWF  21
+0040:  CLRF   22
+0041:  CALL   004
+....................    while(TRUE) 
+....................    { 
+....................      display(0X80,0); 
+0042:  MOVLW  80
+0043:  MOVWF  21
+0044:  CLRF   22
+0045:  CALL   004
+....................      display('Q',1); 
+0046:  MOVLW  51
+0047:  MOVWF  21
+0048:  MOVLW  01
+0049:  MOVWF  22
+004A:  CALL   004
+....................      display(0X81,0); 
+004B:  MOVLW  81
+004C:  MOVWF  21
+004D:  CLRF   22
+004E:  CALL   004
+....................      display('I',1); 
+004F:  MOVLW  49
+0050:  MOVWF  21
+0051:  MOVLW  01
+0052:  MOVWF  22
+0053:  CALL   004
+....................      display(0X82,0); 
+0054:  MOVLW  82
+0055:  MOVWF  21
+0056:  CLRF   22
+0057:  CALL   004
+....................      display('S',1); 
+0058:  MOVLW  53
+0059:  MOVWF  21
+005A:  MOVLW  01
+005B:  MOVWF  22
+005C:  CALL   004
+....................      display(0X83,0); 
+005D:  MOVLW  83
+005E:  MOVWF  21
+005F:  CLRF   22
+0060:  CALL   004
+....................      display('C',1); 
+0061:  MOVLW  43
+0062:  MOVWF  21
+0063:  MOVLW  01
+0064:  MOVWF  22
+0065:  CALL   004
+....................      display(0X84,0); 
+0066:  MOVLW  84
+0067:  MOVWF  21
+0068:  CLRF   22
+0069:  CALL   004
+....................      display('E',1); 
+006A:  MOVLW  45
+006B:  MOVWF  21
+006C:  MOVLW  01
+006D:  MOVWF  22
+006E:  CALL   004
+....................      display(0X85,0); 
+006F:  MOVLW  85
+0070:  MOVWF  21
+0071:  CLRF   22
+0072:  CALL   004
+....................      display('T',1); 
+0073:  MOVLW  54
+0074:  MOVWF  21
+0075:  MOVLW  01
+0076:  MOVWF  22
+0077:  CALL   004
+....................      display(0XC0,0); 
+0078:  MOVLW  C0
+0079:  MOVWF  21
+007A:  CLRF   22
+007B:  CALL   004
+....................      display('2',1); 
+007C:  MOVLW  32
+007D:  MOVWF  21
+007E:  MOVLW  01
+007F:  MOVWF  22
+0080:  CALL   004
+....................      display(0XC1,0); 
+0081:  MOVLW  C1
+0082:  MOVWF  21
+0083:  CLRF   22
+0084:  CALL   004
+....................      display('0',1); 
+0085:  MOVLW  30
+0086:  MOVWF  21
+0087:  MOVLW  01
+0088:  MOVWF  22
+0089:  CALL   004
+....................      display(0XC2,0); 
+008A:  MOVLW  C2
+008B:  MOVWF  21
+008C:  CLRF   22
+008D:  CALL   004
+....................      display('4',1); 
+008E:  MOVLW  34
+008F:  MOVWF  21
+0090:  MOVLW  01
+0091:  MOVWF  22
+0092:  CALL   004
+....................      display(0XC3,0); 
+0093:  MOVLW  C3
+0094:  MOVWF  21
+0095:  CLRF   22
+0096:  CALL   004
+....................      display('9',1); 
+0097:  MOVLW  39
+0098:  MOVWF  21
+0099:  MOVLW  01
+009A:  MOVWF  22
+009B:  CALL   004
+....................      display(0XC4,0); 
+009C:  MOVLW  C4
+009D:  MOVWF  21
+009E:  CLRF   22
+009F:  CALL   004
+....................      display('1',1); 
+00A0:  MOVLW  31
+00A1:  MOVWF  21
+00A2:  MOVLW  01
+00A3:  MOVWF  22
+00A4:  CALL   004
+....................      display(0XC5,0); 
+00A5:  MOVLW  C5
+00A6:  MOVWF  21
+00A7:  CLRF   22
+00A8:  CALL   004
+....................      display('A',1); 
+00A9:  MOVLW  41
+00AA:  MOVWF  21
+00AB:  MOVLW  01
+00AC:  MOVWF  22
+00AD:  CALL   004
+....................      display(0XC6,0); 
+00AE:  MOVLW  C6
+00AF:  MOVWF  21
+00B0:  CLRF   22
+00B1:  CALL   004
+....................      display('0',1); 
+00B2:  MOVLW  30
+00B3:  MOVWF  21
+00B4:  MOVLW  01
+00B5:  MOVWF  22
+00B6:  CALL   004
+....................      display(0XC7,0); 
+00B7:  MOVLW  C7
+00B8:  MOVWF  21
+00B9:  CLRF   22
+00BA:  CALL   004
+....................      display('4',1); 
+00BB:  MOVLW  34
+00BC:  MOVWF  21
+00BD:  MOVLW  01
+00BE:  MOVWF  22
+00BF:  CALL   004
+....................      display(0XC8,0); 
+00C0:  MOVLW  C8
+00C1:  MOVWF  21
+00C2:  CLRF   22
+00C3:  CALL   004
+....................      display('0',1); 
+00C4:  MOVLW  30
+00C5:  MOVWF  21
+00C6:  MOVLW  01
+00C7:  MOVWF  22
+00C8:  CALL   004
+....................      display(0XC9,0); 
+00C9:  MOVLW  C9
+00CA:  MOVWF  21
+00CB:  CLRF   22
+00CC:  CALL   004
+....................      display('2',1); 
+00CD:  MOVLW  32
+00CE:  MOVWF  21
+00CF:  MOVLW  01
+00D0:  MOVWF  22
+00D1:  CALL   004
+00D2:  GOTO   042
+....................       
+....................    } 
+....................  
+.................... } 
+00D3:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F32   HS NOWDT PUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

@@ -1,0 +1,23 @@
+[PROJECT]
+Target=4 LED ADC count.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=4 LED ADC count.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\TASk-3\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\TASk-3\4 LED ADC count]
+Type=4
+[mru-list]
+1=4 LED ADC count.c
+[Opened Files]
+1=4 LED ADC count.c
+2=..\ADC\ADC1.c
+3=
+[4 LED ADC count.c]
+Type=4
+[Units]
+Count=1
+1=4 LED ADC count (main)

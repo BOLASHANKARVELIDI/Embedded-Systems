@@ -1,0 +1,23 @@
+[PROJECT]
+Target=1 LCD DISPLAY VELIDI BOLA SHANKAR.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.008
+Compiler=PCM
+CCSVersion=5.008
+[Target Data]
+FileList=1 LCD DISPLAY VELIDI BOLA SHANKAR.c
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\;C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LCD\
+[C:\Users\BOLA SHANKAR\OneDrive\Desktop\Embedded Training\LCD\1 LCD DISPLAY VELIDI BOLA SHANKAR]
+Type=4
+[mru-list]
+1=1 LCD DISPLAY VELIDI BOLA SHANKAR.c
+[Opened Files]
+1=1 LCD DISPLAY VELIDI BOLA SHANKAR.c
+2=1 LCD DISPLAY A.c
+3=
+[1 LCD DISPLAY VELIDI BOLA SHANKAR.c]
+Type=4
+[Units]
+Count=1
+1=1 LCD DISPLAY VELIDI BOLA SHANKAR (main)
